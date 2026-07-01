@@ -1,0 +1,51 @@
+{
+  "environment": "cheetah-run (DeepMind Control Suite)",
+  "horizon_steps": 5,
+  "description": "Operator error on a shared observation-level F for a pure-SSL LeWM (3 seeds) vs the released single-task TD-MPC2, probed identically.",
+  "lewm_operator_error_shared_F": {
+    "per_seed": [
+      0.3804,
+      0.3767,
+      0.3939
+    ],
+    "mean": 0.3837,
+    "sd": 0.0091
+  },
+  "tdmpc2_single_task_operator_error_shared_F": {
+    "point": 0.8397,
+    "ci95": [
+      0.79,
+      0.89
+    ]
+  },
+  "ratio_lewm_over_tdmpc2": {
+    "per_seed": [
+      0.453,
+      0.4486,
+      0.4691
+    ],
+    "mean": 0.4569,
+    "sd": 0.0108
+  },
+  "persistence_baseline": 1.3315,
+  "mlp_probe_ablation": {
+    "lewm_mean_sd": [
+      0.4935,
+      0.0059
+    ],
+    "tdmpc2": 0.9966,
+    "ratio_mean_sd": [
+      0.4952,
+      0.0059
+    ]
+  },
+  "restricted_F_ratio_mean_sd": [
+    0.395,
+    0.012
+  ],
+  "mt80_multitask_control": {
+    "tdmpc2_single_task": 0.8397,
+    "tdmpc2_mt80": 0.833,
+    "note": "single-task vs mt80 multitask TD-MPC2 are essentially identical, so the cross-architecture gap is not a multitask handicap."
+  }
+}

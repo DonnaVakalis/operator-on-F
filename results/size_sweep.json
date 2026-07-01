@@ -1,0 +1,121 @@
+{
+  "environment": "cheetah-run (DeepMind Control Suite)",
+  "model": "TD-MPC2, released mt80 multitask checkpoints",
+  "sizes_millions": [
+    1,
+    5,
+    19,
+    48,
+    317
+  ],
+  "per_size": {
+    "1": {
+      "return": 13.2847,
+      "operator_error_full_F": 0.9114,
+      "operator_error_full_F_ci95": [
+        0.8921,
+        0.933
+      ],
+      "reward_error": 0.0416,
+      "bellman_residual": 2.6529,
+      "value_only_error": 2.6603
+    },
+    "5": {
+      "return": 26.086,
+      "operator_error_full_F": 0.303,
+      "operator_error_full_F_ci95": [
+        0.2834,
+        0.3235
+      ],
+      "reward_error": 0.0281,
+      "bellman_residual": 1.3258,
+      "value_only_error": 1.3347
+    },
+    "19": {
+      "return": 91.4939,
+      "operator_error_full_F": 0.2833,
+      "operator_error_full_F_ci95": [
+        0.2735,
+        0.2931
+      ],
+      "reward_error": 0.0528,
+      "bellman_residual": 2.7844,
+      "value_only_error": 2.8042
+    },
+    "48": {
+      "return": 43.9405,
+      "operator_error_full_F": 0.3591,
+      "operator_error_full_F_ci95": [
+        0.3527,
+        0.3661
+      ],
+      "reward_error": 0.0311,
+      "bellman_residual": 2.6676,
+      "value_only_error": 2.6971
+    },
+    "317": {
+      "return": 0.897,
+      "operator_error_full_F": 2.6159,
+      "operator_error_full_F_ci95": [
+        2.4277,
+        2.7922
+      ],
+      "reward_error": 0.0906,
+      "bellman_residual": 6.7329,
+      "value_only_error": 6.7848
+    }
+  },
+  "reward_error_range": [
+    0.0281,
+    0.0906
+  ],
+  "spearman_across_sizes": {
+    "operator_vs_return": {
+      "point": -0.9,
+      "boot_ci95": [
+        -0.9,
+        -0.7
+      ]
+    },
+    "operator_vs_bellman_residual": {
+      "point": 0.3,
+      "boot_ci95": [
+        0.3,
+        0.6
+      ]
+    },
+    "operator_vs_kernel_divergence": {
+      "point": 0.1,
+      "boot_ci95": [
+        0.1,
+        0.3
+      ]
+    },
+    "value_slice_vs_bellman_residual": {
+      "point": 0.1,
+      "boot_ci95": [
+        0.1,
+        0.2
+      ]
+    },
+    "value_only_vs_bellman_residual": {
+      "point": 1.0,
+      "boot_ci95": null
+    },
+    "reward_vs_return": {
+      "point": -0.3
+    },
+    "bellman_residual_vs_return": {
+      "point": -0.1
+    },
+    "partial_operator_vs_return_given_reward": -0.892
+  },
+  "leave_one_out_operator_vs_return": {
+    "drop_1M": -0.8,
+    "drop_5M": -1.0,
+    "drop_19M": -0.8,
+    "drop_48M": -1.0,
+    "drop_317M": -0.8
+  },
+  "notes": "Anchor-bootstrap 95% CIs use per-anchor resampling (1000 resamples) over the pooled evaluation anchors; the raw latent dumps are not shipped (regenerate from the released checkpoints), but every point estimate above is the value reported in the paper."
+}
