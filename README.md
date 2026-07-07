@@ -23,7 +23,7 @@ Code and data to reproduce the results in:
 > latent world models.** Donna Vakalis. RLC 2026 World Model Workshop
 > *(non-archival)*.
 >
-> 📄 **Paper:** _arXiv / OpenReview link coming soon._
+> 📄 **Paper:** [[arxiv]](http://arxiv.org/abs/2607.04464)
 
 ## The thirty-second version
 
